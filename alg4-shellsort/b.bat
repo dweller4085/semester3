@@ -1,0 +1,1 @@
+g++ -std=c++17 -Wall -pedantic %1.cpp -o %1.exe

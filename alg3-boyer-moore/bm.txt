@@ -1,0 +1,88 @@
+string:
+	tuple of elements 'chars' from set 'alphabet';
+	map is such:
+		m (S) (I, A) ; m (S): I --> A
+		S[I] = A
+		I is integer e [0; |S| - 1]
+		e.g.:
+			A = {a,b,c}, S = (a, b, c, c, a)
+			I e {0, 1, 2, 3, 4} === [0; |S| - 1];
+			S: {(0, a), (1, b), (2, c), (3, c), (4, a)}
+			S[0] = a, s[3] = c.
+
+bc:
+	given that P[j] != T[i]:
+	if E max {k | P[k] = T[i] and k < j} shift := j - k;
+	else shift := j + 1;
+
+e.g.
+	n = 12
+	m = 8
+
+	i 		0 1 2 3 4 5 6 7 8 9 A B
+	T 		M A N P A N A M A N A P
+	P 				A N A M P N A M
+	j 				0 1 2 3 4 5 6 7
+	
+	
+	
+	
+	  x
+	0123456789A
+	mannnannama
+	      anna
+	      0123
+	  x
+
+0123456789012345678901
+abbaaabaxabaabbaabbbaa
+xaba
+0123
+             x
+0         1         2
+012345678901234567890123456789
+panmaannamapananampaanammaanap
+              anampaanam
+              0123456789
+             x
+
+bc[5][n] = 4
+gs[6] = 
+
+                  
+0123456789012345678901234
+testtestttesteesttetsttet
+                 tetst
+                 01234
+                   
+
+bc[2][e] = 1
+gs[3] = 4
+
+gs:
+	
+	
+	
+bm:
+	in:
+		(implied):
+			Alphabet - set of elements 'chars'
+		text - string of Alphabet
+		pat - string of Alphabet
+	
+	out:
+		occurence_list - list of integers
+	
+	var:
+		i - integer
+		j - integer
+		bc - bc table
+		gs - gs table
+	
+	algorithm:
+		i := pat.end
+		j := pat.end
+		
+		comp_loop:
+			if i == j
+			
